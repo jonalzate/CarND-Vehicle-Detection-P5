@@ -13,11 +13,12 @@
 [//]: # (Image References)
 [image1]: ./output_images/car_notcar.png
 [image2]: ./output_images/hog_features.png
-[image3]: ./output_images/sliding_fullwindow_search.png
-[image4]: ./output_images/sliding_halfwindow_search.png
-[image5]: ./output_images/bbox_with_heat.png
-[image6]: ./output_images/heat_map.png
-[image7]: ./output_images/output_bboxes.png
+[image3]: ./output_images/combined_normalized_features.png
+[image4]: ./output_images/sliding_fullwindow_search.png
+[image5]: ./output_images/sliding_halfwindow_search.png
+[image6]: ./output_images/bbox_with_heat.png
+[image7]: ./output_images/heat_map.png
+[image8]: ./output_images/output_boxes.png
 [video1]: ./project_video_proc.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
@@ -49,6 +50,8 @@ Here is an example using the `HSV` color space and HOG parameters of `orientatio
 
 ![alt text][image2]
 
+![alt text][image3]
+
 
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
@@ -70,7 +73,7 @@ The window size and overlap should be carefully selected. Size of the window sho
 Here are some sample results for a fixed window size of 128x128 pixels and overlap for the provided test images:
 
 
-![alt text][image3]
+![alt text][image4]
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
@@ -82,7 +85,7 @@ Here are some sample results for a fixed window size of 128x128 pixels and overl
 
 * To increase performance we need to analize the smallest possible number of windows. That is why, one can scan with a search window not across the whole image, but only areas where a new car can appear and also we are going to scan areas where a car was detected. Giving different x and y starting positions at slide_window also helped to avoid searching for cars in the top (sky, tress) portion of the image
 
-![alt text][image4]
+![alt text][image5]
 ---
 
 ### Video Implementation
@@ -99,13 +102,13 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ### Here are six frames and their corresponding heatmaps:
 
-![alt text][image5]
-
-### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
 ![alt text][image6]
 
-### Here the resulting bounding boxes are drawn onto the last frame in the series:
+### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
 ![alt text][image7]
+
+### Here the resulting bounding boxes are drawn onto the last frame in the series:
+![alt text][image8]
 
 
 
