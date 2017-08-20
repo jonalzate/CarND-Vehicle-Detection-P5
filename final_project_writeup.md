@@ -12,13 +12,13 @@
 
 [//]: # (Image References)
 [image1]: ./output_images/car_notcar.png
-[image2]: ./output_images/HOG_features.jpg
-[image3]: ./output_images/sliding_fullwindow_search.jpg
-[image4]: ./output_images/sliding_halfwindow_search.jpg
+[image2]: ./output_images/HOG_features.png
+[image3]: ./output_images/sliding_fullwindow_search.png
+[image4]: ./output_images/sliding_halfwindow_search.png
 [image5]: ./examples/bboxes_and_heat.png
 [image6]: ./examples/labels_map.png
 [image7]: ./examples/output_bboxes.png
-[video1]: ./project_video.mp4
+[video1]: ./project_video_proc.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 
