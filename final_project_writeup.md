@@ -91,6 +91,7 @@ Here are some sample results for a fixed window size of 128x128 pixels and overl
 ### Video Implementation
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
+
 Here's a [link to my video result](./project_video.mp4)
 
 
@@ -118,12 +119,12 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-*The pipeline may fail in case of difficult light conditions, which could be partly resolved by optimizing the classifier.
+* The pipeline may fail in case of difficult light conditions, which could be partly resolved by optimizing the classifier.
 
-*It is possible to improve the classifier by additional data augmentation, hard negative mining, classifier parameters tuning etc.
+* It is possible to improve the classifier by additional data augmentation, hard negative mining, classifier parameters tuning etc.
 
-*The pipeline has some potential problems in case of car overlaps another. To deal this problem one may introduce long term memory of car position and a kind of predictive algorithm which can predict where occluded car can be/appear and where it is worth to look for it.
+* The pipeline has some potential problems in case of car overlaps another. To deal this problem one may introduce long term memory of car position and a kind of predictive algorithm which can predict where occluded car can be/appear and where it is worth to look for it.
 
-*To eliminate false positives on areas out of the road, one can deeply combine results from the Advanced Lane Line finding project to correctly determine the wide ROI on the whole frame by the road boundaries. Unfortunately, it was not correctly implemented (just hard coded, which is enought for the project but not a good implementation for a real-world application) due to time limitation.
+* To eliminate false positives on areas out of the road, one can deeply combine results from the Advanced Lane Line finding project to correctly determine the wide ROI on the whole frame by the road boundaries. Unfortunately, it was not correctly implemented (just hard coded, which is enought for the project but not a good implementation for a real-world application) due to time limitation.
 
-*The pipeline is not a real-time and this approach seems to take a lot of work. I was thinkin of maybe using a neural network instead. I tried to played around with YOLO network from darknet and it is way faster and it process realtime. So, I  personally spend some work training a DNN than using this approach. But it was definitely a nice experience and I learned a lot about openCV and computer vision approaches for feature extraction that are also helpful when preparing data for DNN training.
+* The pipeline is not a real-time and this approach seems to take a lot of work. I was thinkin of maybe using a neural network instead. I tried to played around with YOLO network from darknet and it is way faster and it process realtime. So, I  personally spend some work training a DNN than using this approach. But it was definitely a nice experience and I learned a lot about openCV and computer vision approaches for feature extraction that are also helpful when preparing data for DNN training.
