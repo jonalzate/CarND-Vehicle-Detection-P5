@@ -15,9 +15,9 @@
 [image2]: ./output_images/hog_features.png
 [image3]: ./output_images/sliding_fullwindow_search.png
 [image4]: ./output_images/sliding_halfwindow_search.png
-[image5]: ./output_images/bboxes_with_heat.png
-[image6]: ./examples/labels_map.png
-[image7]: ./examples/output_bboxes.png
+[image5]: ./output_images/bbox_with_heat.png
+[image6]: ./output_images/heat_map.png
+[image7]: ./output_images/output_bboxes.png
 [video1]: ./project_video_proc.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
